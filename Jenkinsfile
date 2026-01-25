@@ -1,8 +1,9 @@
 pipeline {
-  agent any
-
-  tools {
-    nodejs 'NodeJS'  // This references the NodeJS installation configured in Jenkins
+  agent {
+    docker {
+      image 'node:18-alpine'
+      args '-v /var/run/docker.sock:/var/run/docker.sock'
+    }
   }
 
   stages {
