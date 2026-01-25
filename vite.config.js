@@ -8,5 +8,6 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/setupTests.js',
+    pool: 'threads', // Use threads instead of forks to avoid ES module issues
   },
 })
