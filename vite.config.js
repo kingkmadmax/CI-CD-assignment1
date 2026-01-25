@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/setupTests.js',
-    pool: 'threads', // Use threads instead of forks to avoid ES module issues
+    // Removed jsdom environment to avoid Node.js 18 compatibility issues
+    // environment: 'jsdom',
+    // setupFiles: './src/setupTests.js',
   },
 })
