@@ -21,8 +21,10 @@ pipeline {
     input message: 'Finished using the web site? (Click "Proceed" to continue)'
     sh './jenkins/scripts/kill.sh'
   }
-   }
-   post {
+    }
+  }
+
+  post {
     success {
         emailext (
             subject: "✅ Build Success: ${env.JOB_NAME}",
@@ -37,7 +39,5 @@ pipeline {
             to: "your-email@gmail.com"
         )
     }
-}
-
   }
 }
