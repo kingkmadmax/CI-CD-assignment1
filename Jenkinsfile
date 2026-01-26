@@ -22,11 +22,6 @@ pipeline {
     sh './jenkins/scripts/kill.sh'
   }
    }
-   stage('Run App') {
-  steps {
-    sh 'npm start &'
-  }
-}
 
   }
 }
