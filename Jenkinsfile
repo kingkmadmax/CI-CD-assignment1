@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:20-alpine'
-      args '-u root -p 3000:3000 -p 4173:4173'
-    }
-  }
+  agent any
 
   stages {
     stage('Install Dependencies') {
